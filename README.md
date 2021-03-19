@@ -36,3 +36,12 @@
   `
   @typescript-eslint/eslint-plugin babel-eslint @typescript-eslint/parser eslint eslint-config-prettier eslint-config-standard eslint-webpack-plugin eslint-plugin-node eslint-plugin-react eslint-plugin-prettier eslint-plugin-promise eslint-plugin-standard prettier
   `
+  - babel 支持es6 新特性
+  `
+  @babel/plugin-proposal-optional-chaining   可选链操作( .? )
+  @babel/plugin-proposal-nullish-coalescing-operator  可选链操作( ?? ) 默认值
+  @babel/plugin-proposal-do-expressions  do语法 ( do{...} )
+  @babel/plugin-proposal-class-properties  编译类
+  @babel/plugin-proposal-decorators   装饰器
+  @babel/plugin-transform-arrow-functions  箭头函数的处理
+  `
