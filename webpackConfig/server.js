@@ -63,7 +63,7 @@ const getIPAddress = () => {
 /**
  * 自动获取有用端口
  */
-(async function(address) {8
+(async function(address) {
   portfinder.basePort = 3000;
   const port = await portfinder
   .getPortPromise()
@@ -77,6 +77,7 @@ const getIPAddress = () => {
     console.log('Listening on the folowing address:');
     console.log('\x1b[96m',`${addressList[0]}`);
     console.log('\x1b[95m',`${addressList[1]}`);
+    console.log('Please wait while building . . .');
     open(addressList[0], {wait: true});
   })
 })(getIPAddress());

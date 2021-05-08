@@ -6,6 +6,7 @@ const baseEntry = path.resolve(__dirname, '../src/index.tsx');
 const plugins = require('./common/plugins');
 const rules = require('./common/rules');
 const optimization = require('./common/optimization');
+const globalVariable = require('./env/commonEnv');
 
 module.exports = {
     mode: process.env.NODE_ENV === 'dev'? 'development': 'production',
@@ -15,7 +16,8 @@ module.exports = {
       : baseEntry,
     output: {
       path: path.resolve(__dirname,'../dist'),
-      filename: './static/js/[name]_[hash:8].js'
+      filename: './static/js/[name]_[hash:8].js',
+      publicPath: JSON.parse(globalVariable.publicPath)
     },
     module: {
       rules
